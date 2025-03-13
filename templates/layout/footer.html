@@ -1,0 +1,30 @@
+{% load static %}
+{% block footer %}
+
+{% with request.resolver_match.url_name as url_name %}
+  {% if url_name == 'dashboard' or url_name == 'index' or url_name == 'mathaedes' or url_name == 'math_covid' %}
+<footer class="bg-dark text-white py-4 footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contacto</h5>
+                <p>Dirección: Calle Falsa 123</p>
+                <p>Teléfono: 123-456-7890</p>
+                <p>Email: info@ejemplo.com</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Redes Sociales</h5>
+                <a href="https://www.facebook.com/TU_PAGINA" target="_blank" class="text-white mx-2"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.twitter.com/TU_CUENTA" target="_blank" class="text-white mx-2"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="https://www.instagram.com/TU_INSTAGRAM" target="_blank" class="text-white mx-2"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/TU_PERFIL" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <div class="col-md-4 text-right">
+                <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+  {% endif %}
+{% endwith %}
+{% endblock  %}

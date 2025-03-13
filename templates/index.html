@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Root
+{% endblock  %}
+
+{% block content %}
+
+<body class="body-button-half">
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <a href="https://www.instagram.com/TU_PERFIL_DE_INSTAGRAM/" target="_blank">
+                    <button class="btn btn-primary btn-lg">Síguenos en Instagram</button>
+                </a>
+                
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="{% url "support" %}" class="button-half"><img src="{% static 'imgs/mano.png' %}" alt=""><button class="btn btn-success btn-lg">Aqui va otra cosa</button></a>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+{% endblock  %}
